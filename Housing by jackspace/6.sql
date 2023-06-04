@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS house_keys (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    house_id INT NOT NULL,
+    key_code VARCHAR(255) NOT NULL,
+    FOREIGN KEY (house_id) REFERENCES houses (id) ON DELETE CASCADE
+);
